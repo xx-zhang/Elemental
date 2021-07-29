@@ -1,0 +1,15 @@
+FROM ubuntu:20.04
+MAINTAINER xx-zhang <actanble@gmail.com>
+
+ENV LANG en_US.UTF-8
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+ADD ./sources.list /etc/apt/sources.list
+RUN apt-get -yqq update
+
+RUN apt-get install git libssl-dev libpam0g-dev zlib1g-dev dh-autoreconf -y
+
+RUN  git clone https://github.com/shellinabox/shellinabox.git --depth=1 && \
+    cd shellinabox  &&  autoreconf -i && \
+    ./configure && make

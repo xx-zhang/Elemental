@@ -1,0 +1,29 @@
+# coding:utf-8
+--trusted-host mirrors.aliyun.com --index-url http://mirrors.aliyun.com/pypi/simple/
+# --index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+antlr4-python3-runtime==4.7.2
+attackcti==0.2.7
+certifi==2019.9.11
+cffi==1.13.0
+chardet==3.0.4
+Django==3.1
+django-markdownx==2.0.28
+gitdb2==2.0.6
+GitPython==3.0.3
+idna==2.8
+Markdown==3.1.1
+pandas==1.1.2
+Pillow>=6.2.2
+pycparser==2.19
+python-dateutil==2.8.0
+pytz==2019.2
+requests
+simplejson==3.16.0
+six==1.12.0
+smmap2==2.0.5
+sqlparse==0.3.0
+PyMySQL==0.9.2
+stix2==1.2.1
+stix2-patterns==1.1.0
+taxii2-client==0.5.0

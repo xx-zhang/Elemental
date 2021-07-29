@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  elasticsearch:
+    image: registry.cn-hangzhou.aliyuncs.com/actanble/wazuh-3_10:elasticsearch
+    hostname: elasticsearch
+    container_name: es01
+    restart: always
+    ports:
+      - "9200:9200"
+    volumes:
+      - /home/es_data/:/usr/share/elasticsearch/data
+    environment:
+      - "ES_JAVA_OPTS=-Xms3g -Xmx3g"
+      - ELASTIC_CLUSTER=true
+      - CLUSTER_NODE_MASTER=true
+      - CLUSTER_MASTER_NODE_NAME=es01
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 3g
