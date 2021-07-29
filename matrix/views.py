@@ -260,5 +260,6 @@ def individualTechnique(request, pk):
         'tech_notes': all_notes,
         'yaml_rules': yaml_rule_list,
     }
+
     return render(request, 'matrix/technique.html', context = context)
 
