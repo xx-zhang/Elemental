@@ -10,4 +10,3 @@ __
 
 ## sigma
 - [att-ck-sigma](https://www.sans.org/webcasts/mitre-att-ck-sigma-alerting-110010/)
-
